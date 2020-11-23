@@ -10,7 +10,8 @@ public class MainPage extends PageObject {
     WebElementFacade attentionPopup;
     @FindBy(xpath = "//div[@class='attention--header--block--desktop']//div[@class='close-block']")
     WebElementFacade attentionPopupClose;
-
+    @FindBy(xpath = "//div[contains(@class, 'header-cart')]/a")
+    WebElementFacade bucketBtn;
     public void closeAttentionPopup() {
         boolean isPopupOpened = attentionPopup.isCurrentlyVisible();
         if(isPopupOpened) {
@@ -18,6 +19,10 @@ public class MainPage extends PageObject {
                     .waitUntilClickable()
                     .click();
         }
+    }
+
+    public void clickBucketButton() {
+        bucketBtn.waitUntilClickable().click();
     }
 
 }
