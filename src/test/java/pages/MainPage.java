@@ -12,6 +12,9 @@ public class MainPage extends PageObject {
     WebElementFacade attentionPopupClose;
     @FindBy(xpath = "//div[contains(@class, 'header-cart')]/a")
     WebElementFacade bucketBtn;
+    @FindBy(xpath = "//input[@name='q']")
+    WebElementFacade searchInput;
+
     public void closeAttentionPopup() {
         boolean isPopupOpened = attentionPopup.isCurrentlyVisible();
         if(isPopupOpened) {
@@ -24,5 +27,15 @@ public class MainPage extends PageObject {
     public void clickBucketButton() {
         bucketBtn.waitUntilClickable().click();
     }
+
+    public void typeIntoSearchInput(String text) {
+        searchInput.waitUntilClickable();
+        typeInto(searchInput, text);
+    }
+
+    public String getSearchInputValue() {
+        return searchInput.getValue();
+    }
+
 
 }
