@@ -61,8 +61,4 @@ public class AnalyzesPopupSteps {
         analyzesPopup.attentionIsPresent(arg1);
     }
 
-
-
-
-
 }

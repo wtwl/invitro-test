@@ -31,7 +31,6 @@ public class AnalyzesPriceSteps {
     }
 
 
-
     @When("^Перейти в корзину$")
     public void перейти_в_корзину()  {
         mainPage.closeAttentionPopup();

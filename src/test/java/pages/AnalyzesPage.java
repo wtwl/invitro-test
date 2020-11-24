@@ -1,7 +1,6 @@
 package pages;
 
 import net.serenitybdd.core.pages.PageObject;
-import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 
 
@@ -28,9 +27,6 @@ public class AnalyzesPage extends PageObject {
         currentAnalyzeProduct = getAnalyzeXpath(i);
     }
 
-
-
-
     public void savePrice(int i) {
         selectAnalyzeItemByNumber(i + 1);
         String currentPriceXpath = getChild(currentAnalyzeProduct, priceXpath);
@@ -45,7 +41,5 @@ public class AnalyzesPage extends PageObject {
     public String getCurrentPrice() {
         return currentPrice.replaceAll("\\D+", "");
     }
-
-
 
 }

@@ -72,8 +72,8 @@ public class AnalyzesPopup extends PageObject {
         String red = "rgb(255, 0, 0)";
 
         return inz.equals(red)
-                        && born.equals(red)
-                        && surname.equals(red);
+                && born.equals(red)
+                && surname.equals(red);
     }
 
     public boolean isPopUpOpened() {
