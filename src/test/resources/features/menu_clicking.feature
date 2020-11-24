@@ -4,6 +4,6 @@ Feature: Прокликивание меню
 
   Scenario: Прокликивание меню и подменю
 
-    Given Нахожусь на странице
-    When I click on menu items
-    Then corresponding page opens
+    Given Нахожусь на странице Медицинские услуни
+    When Перейти по каждому пункту меню
+    Then Открывается страница соответствующего меню

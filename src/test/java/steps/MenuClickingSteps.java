@@ -7,20 +7,21 @@ import pages.RadiologyPage;
 
 public class MenuClickingSteps {
     RadiologyPage radiologyPage;
-
-    @Given("^I am on Radiology page$")
-    public void i_am_on_Radiology_page() {
+    
+    @Given("^Нахожусь на странице Медицинские услуни$")
+    public void нахожусь_на_странице_Медицинские_услуни() {
         radiologyPage.open();
     }
 
 
-    @When("^I click on menu items$")
-    public void i_click_on_menu_items() {
+    @When("^Перейти по каждому пункту меню$")
+    public void перейти_по_каждому_пункту_меню() {
         radiologyPage.clickOnMenu();
     }
 
-    @Then("^corresponding page opens$")
-    public void corresponding_page_opens() {
-
+    @Then("^Открывается страница соответствующего меню$")
+    public void открывается_страница_соответствующего_меню() {
     }
+    
+    
 }
